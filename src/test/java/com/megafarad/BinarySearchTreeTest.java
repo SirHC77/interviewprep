@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BinaryTreeTest {
+class BinarySearchTreeTest {
 
     @Test
     void append() {
-        BinaryTree<Integer> test = new BinaryTree<>();
+        BinarySearchTree<Integer> test = new BinarySearchTree<>();
 
         test.append(1);
         test.append(3);
@@ -18,7 +18,7 @@ class BinaryTreeTest {
 
     @Test
     void contains() {
-        BinaryTree<Integer> test = new BinaryTree<>();
+        BinarySearchTree<Integer> test = new BinarySearchTree<>();
         test.append(1);
         test.append(100);
         test.append(3);
@@ -28,5 +28,16 @@ class BinaryTreeTest {
         assertTrue(test.contains(3));
         assertFalse(test.contains(0));
 
+    }
+
+    @Test
+    void height() {
+        BinarySearchTree<Integer> test = new BinarySearchTree<>();
+        test.append(5);
+        test.append(10);
+        test.append(1);
+        test.append(3);
+        test.append(20);
+        assertEquals(2, test.height());
     }
 }

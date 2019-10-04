@@ -114,7 +114,6 @@ public class BinarySearchTree<E extends Comparable<E>> {
         if (node == null) {
             return;
         } else {
-            System.out.println(node.element);
             preOrderTraverseRecursive(node.left);
             preOrderTraverseRecursive(node.right);
         }
